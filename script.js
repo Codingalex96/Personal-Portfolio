@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Initialize EmailJS with user ID
+    emailjs.init('lzL0DNlABawdysupm');  
+
     const contactForm = document.getElementById("contactForm");
     const formMessage = document.getElementById("formMessage");
 
@@ -43,9 +46,24 @@ document.addEventListener("DOMContentLoaded", function () {
             formMessage.style.color = "red";
             formMessage.textContent = "Please fill out all fields.";
         } else {
-            formMessage.style.color = "green";
-            formMessage.textContent = "Message sent successfully!";
-            contactForm.reset();
+            // Prepare the template parameters
+            const templateParams = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            // Send the email using EmailJS
+            emailjs.send('service_3pzsdkj', 'template_xfrpkdb', templateParams)
+                .then(function(response) {
+                    formMessage.style.color = "green";
+                    formMessage.textContent = "Message sent successfully!";
+                    contactForm.reset();
+                }, function(error) {
+                    console.error("EmailJS Error:", error);
+                    formMessage.style.color = "red";
+                    formMessage.textContent = "Oops! Something went wrong.";
+                });
         }
     });
 });
