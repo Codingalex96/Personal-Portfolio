@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 name: name,
                 email: email,
                 message: message
+                
             };
 
             // Send the email using EmailJS
