@@ -30,19 +30,19 @@ body {
 }
 
 .light-theme {
-    background-color: #ffffff !important;
-    color: #121212 !important;
+    background-color: #ffffff ;
+    color: #121212;
 }
 
 .light-theme h1, 
 .light-theme p, 
 .light-theme a, 
 .light-theme button {
-    color: #121212 !important;
+    color: #121212;
 }
 
 .light-theme .navbar {
-    background-color: #f8f9fa !important;
+    background-color: #f8f9fa;
 }
 
 #contactForm {
