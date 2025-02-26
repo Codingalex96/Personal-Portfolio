@@ -4,6 +4,8 @@ body {
     color: #ffffff;
 }
 
+
+
 .navbar {
     background-color: #1e1e1e;
 }
@@ -159,4 +161,16 @@ p {
     font-size: 1.25rem;
     margin-bottom: 40px;
     color: #777; /* Lighter text color for the description */
+}
+
+.section-zoom {
+    opacity: 0; /* Start with the section invisible */
+    transform: scale(0.8); /* Start with a smaller scale */
+    transition: transform 0.6s ease, opacity 0.6s ease; /* Smooth transition */
+}
+
+/* When the section is in view */
+.section-zoom.in-view {
+    opacity: 1; /* Fade in */
+    transform: scale(1); /* Zoom to normal size */
 }

@@ -68,3 +68,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        // If the section is in view, add the class to trigger zoom-in
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target); // Stop observing after the animation
+        }
+    });
+}, {
+    threshold: 0.4 // Trigger when 40% of the section is in view
+});
+
+// Target the sections you want to animate
+const sections = document.querySelectorAll('.section-zoom');
+sections.forEach(section => {
+    observer.observe(section);
+});
