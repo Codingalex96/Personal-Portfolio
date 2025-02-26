@@ -4,11 +4,10 @@ body {
     color: #ffffff;
 }
 
-
-
 .navbar {
     background-color: #1e1e1e;
 }
+
 
 .hero {
     height: 100vh;
@@ -150,7 +149,6 @@ body {
     font-size: 1rem;
 }
 
-
 h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -173,4 +171,78 @@ p {
 .section-zoom.in-view {
     opacity: 1; /* Fade in */
     transform: scale(1); /* Zoom to normal size */
+}
+
+/* Social icons styles */
+.social-icons {
+    display: flex;
+    gap: 10px; /* Space between logos */
+    align-items: center;
+}
+
+.social-icon {
+    width: 24px; /* Size of the icons */
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Navbar styling fixes for mobile */
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    flex-grow: 1; /* Allow the navbar to grow and take up space */
+}
+
+/* Fix for the social icons on mobile */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: auto; /* Ensure it stays on the right */
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Increase icon size on larger screens */
+@media (min-width: 768px) {
+    .social-icon {
+        width: 30px; /* Increase the size of the icons for desktop */
+        height: 30px;
+    }
+}
+
+/* Navbar collapses in mobile view */
+@media (max-width: 767px) {
+    .navbar-nav {
+        flex-direction: column; /* Stack the navbar links vertically */
+        text-align: center; /* Center align the links */
+        gap: 10px;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        justify-content: center; /* Center the content in the collapsed navbar */
+    }
+
+    .social-icons {
+        position: absolute; /* Keep social icons aligned to the right in collapsed navbar */
+        right: 10px; /* Adjust space from the right */
+        top: 50%;
+        transform: translateY(-50%); /* Center the icons vertically */
+    }
+}
+
+/* Adjust navbar padding for mobile */
+@media (max-width: 767px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Add more space for navbar content */
+    }
 }
