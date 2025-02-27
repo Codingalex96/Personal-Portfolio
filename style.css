@@ -63,7 +63,7 @@ body {
 
 /* Style the submit button */
 #contactForm button {
-    background-color: #e68900; /* Green background */
+    background-color: #42023f; /* Green background */
     color: rgb(0, 0, 0); /* White text */
     padding: 12px 20px;
     border: none;
@@ -75,7 +75,7 @@ body {
 
 /* Hover effect for the button */
 #contactForm button:hover {
-    background-color: #c25a04; /* Darker green on hover */
+    background-color: #f21bc3; /* Darker green on hover */
 }
 
 /* Optional: Responsive design */
@@ -232,3 +232,13 @@ p {
     }
 }
 
+.tech-image {
+    width: 180px; /* Adjust size of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 15px; /* Add space between text and image */
+    transition: transform 0.3s ease-in-out;
+}
+
+.tech-image:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
