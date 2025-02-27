@@ -29,21 +29,6 @@ body {
     background-color: #e68900;
 }
 
-.light-theme {
-    background-color: #ffffff ;
-    color: #121212;
-}
-
-.light-theme h1, 
-.light-theme p, 
-.light-theme a, 
-.light-theme button {
-    color: #121212;
-}
-
-.light-theme .navbar {
-    background-color: #f8f9fa;
-}
 
 #contactForm {
     width: 100%;
@@ -246,3 +231,4 @@ p {
         padding: 0.5rem 1rem; /* Add more space for navbar content */
     }
 }
+
